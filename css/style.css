@@ -27,7 +27,7 @@
 }
 
 .container .header-text {
-  padding: 0;
+  margin: 0 0 0 175px;
   -ms-grid-column: 3;
   -ms-grid-column-span: 3;
   grid-column: 3/6;
@@ -62,15 +62,41 @@
 }
 
 .container .display-markup {
-  -ms-grid-column: 3;
-  -ms-grid-column-span: 4;
-  grid-column: 3/7;
   background-color: pink;
   margin: 20px 0px;
   height: 100px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 150%;
+  color: white;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 4fr 1fr;
+      grid-template-columns: 1fr 4fr 1fr;
 }
 
-.container .display-markup input {
+.container .display-markup .display-text {
+  margin-top: 20px;
+}
+
+.container .display-markup .delete-button {
+  cursor: pointer;
   border-radius: 50%;
+  width: 50px;
+  border-style: none;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  background-color: white;
+}
+
+.container .display-markup .radio {
+  cursor: pointer;
+}
+
+.container .display-markup > * {
+  height: 50px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 }
 /*# sourceMappingURL=style.css.map */
