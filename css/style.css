@@ -63,6 +63,7 @@ html {
   -ms-grid-column: 3;
   -ms-grid-column-span: 4;
   grid-column: 3/7;
+  overflow: hidden;
 }
 
 .container .display-markup {
@@ -76,6 +77,8 @@ html {
   display: grid;
   -ms-grid-columns: 1fr 4fr 1fr;
       grid-template-columns: 1fr 4fr 1fr;
+  -webkit-transition: all 300ms ease-in;
+  transition: all 300ms ease-in;
 }
 
 .container .display-markup .display-text {
@@ -107,30 +110,13 @@ html {
       align-self: center;
 }
 
-.slide-right {
-  -webkit-animation: slide-right 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-  animation: slide-right 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+.complete {
+  text-decoration: line-through;
+  opacity: 0.3;
 }
 
-@-webkit-keyframes slide-right {
-  0% {
-    -webkit-transform: translateX(0);
-    transform: translateX(0);
-  }
-  100% {
-    -webkit-transform: translateX(100px);
-    transform: translateX(100px);
-  }
-}
-
-@keyframes slide-right {
-  0% {
-    -webkit-transform: translateX(0);
-    transform: translateX(0);
-  }
-  100% {
-    -webkit-transform: translateX(100px);
-    transform: translateX(100px);
-  }
+.delete-anim {
+  -webkit-transform: translateX(-1100px);
+          transform: translateX(-1100px);
 }
 /*# sourceMappingURL=style.css.map */

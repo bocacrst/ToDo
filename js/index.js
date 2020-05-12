@@ -17,14 +17,25 @@ headerButton.addEventListener('click', ()=>{
 })
 
 display.addEventListener('click', e =>{
+   const toDo = e.target.parentElement;
 
     if(e.target.className === "delete-button"){
-        console.log('Delete');
-        e.target.parentElement.remove();
+
+        toDo.classList.add('delete-anim');
+        toDo.addEventListener('transitionend', () =>{
+            toDo.remove();
+        })
+       
     }
-    else{
-       // console.log('not DEL button')
+   
+    if(e.target.className === "radio"){
+       
+        toDo.classList.toggle('complete');
+       
     }
+   
+  
+   
 
 })
 
